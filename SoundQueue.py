@@ -14,7 +14,10 @@ class SoundQueue(Thread):
 
     def run(self):
         for file in self.fileList:
-            playsound.playsound(file, True)
+            try:
+                playsound.playsound(file, True)
+            except playsound.PlaysoundException:
+                print("Cannot play sound right now!")
 
 
 if __name__ == "__main__":

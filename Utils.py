@@ -33,25 +33,25 @@ def fetchImage(color, imgpath):
 def squeek(move):
     queue = SoundQueue.SoundQueue()
     if move[0].islower() or "P" in move:
-        queue.addSound("sound/pawn.mp3")
+        queue.addSound(getResourcePath("sound/pawn.mp3"))
     elif "N" in move:
-        queue.addSound("sound/knight.mp3")
+        queue.addSound(getResourcePath("sound/knight.mp3"))
     elif "K" in move:
-        queue.addSound("sound/king.mp3")
+        queue.addSound(getResourcePath("sound/king.mp3"))
     elif "B" in move:
-        queue.addSound("sound/bishop.mp3")
+        queue.addSound(getResourcePath("sound/bishop.mp3"))
     elif "R" in move:
-        queue.addSound("sound/rook.mp3")
+        queue.addSound(getResourcePath("sound/rook.mp3"))
     elif "Q" in move:
-        queue.addSound("sound/queen.mp3")
+        queue.addSound(getResourcePath("sound/queen.mp3"))
     elif "O-O" in move or "O-O-O" in move:
-        queue.addSound("sound/castling.mp3")
+        queue.addSound(getResourcePath("sound/castling.mp3"))
 
     if "x" in move:
-        queue.addSound("sound/capture.mp3")
+        queue.addSound(getResourcePath("sound/capture.mp3"))
     if "=" in move:
-        queue.addSound("sound/promote.mp3")
+        queue.addSound(getResourcePath("sound/promote.mp3"))
     if "+" in move:
-        queue.addSound("sound/check.mp3")
+        queue.addSound(getResourcePath("sound/check.mp3"))
     if "#" in move:
-        queue.addSound("sound/checkmate.mp3")
+        queue.addSound(getResourcePath("sound/checkmate.mp3"))
